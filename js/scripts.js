@@ -1,6 +1,5 @@
 //Business logic
 function strToConvert(userInput) {
-  // var strippedStr = userInput.split(' ').join('');
   var strippedStr = userInput.replace(/[^\w]/g,"");
   var row = Math.ceil(Math.sqrt(strippedStr.length));
   var column = Math.floor(Math.sqrt(strippedStr.length));
@@ -10,7 +9,6 @@ function strToConvert(userInput) {
     strippedStr = strippedStr.slice(column, strippedStr.length);
     arrayOfStrings.push(substring);
   }
-  // alert(arrayOfStrings);
   var output = '';
   for (var index = 0; index < column; index += 1) {
     arrayOfStrings.forEach(function(orderedStr) {
@@ -20,10 +18,6 @@ function strToConvert(userInput) {
     });
   }
     return output;
-//   }
-//   for element in array with var index=0 and index += 1
-//     output.join(element[index]);
-//
 }
 
 
